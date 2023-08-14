@@ -154,28 +154,6 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <div className="mr-[20px] ml-[10px] flex h-[43px] w-[308px] cursor-pointer items-center  justify-center rounded-[10px] border border-[#12AD50] text-[16px] font-medium text-[#12AD50] hover:text-[#148541]">
-                  <img
-                    src="/images/header/check.svg"
-                    alt="image"
-                    className={`mr-[10px] w-[20px]`}
-                  />
-                  <a
-                    href="/verified-contributor"
-                    target="_blank"
-                    rel="nofollow noreferrer"
-                    className=" "
-                  >
-                    Become a Verified Contributor
-                  </a>
-                </div>
-                <div>
-                  <Web3Button />
-                </div>
-                <div className="">{isChainWrong && <Web3NetworkSwitch />}</div>
-                <div>{/* <ThemeToggler /> */}</div>
-              </div>
             </div>
           </div>
         </div>
