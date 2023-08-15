@@ -80,7 +80,7 @@ const Header = () => {
                 <img
                   src="/images/header/l3a.svg"
                   alt="image"
-                  className={`w-[100px]`}
+                  className={`ml-5 w-[100px]`}
                 />
               </Link>
             </div>

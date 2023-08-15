@@ -107,31 +107,31 @@ const Registration = () => {
               Speaker registration
             </div>
             <div className="mt-[24px] lg:mt-[38px] lg:flex lg:justify-between">
-              <div className="mb-[15px] flex lg:mb-0 lg:w-[345px]">
+              <div className="mb-[19px] flex lg:mb-0 lg:w-[345px]">
                 <p className="mr-[12px] flex text-[12px] font-bold lg:mr-[19px] lg:text-[18px]">
                   Step 01
                 </p>
-                <p className="text-[11px] lg:w-[251px] lg:text-[16px]">
+                <p className="w-[200px] text-[11px] lg:w-[251px] lg:text-[16px]">
                   Pick the industries/areas in which you would share your
                   expertise.
                 </p>
               </div>
-              <div className="mb-[15px] flex lg:mb-0 lg:w-[345px]">
+              <div className="mb-[19px] flex lg:mb-0 lg:w-[345px]">
                 <p className="mr-[12px] flex text-[12px] font-bold lg:mr-[19px] lg:text-[18px]">
                   Step 02
                 </p>
-                <p className="text-[11px] lg:w-[251px] lg:text-[16px]">
-                  Pick the industries/areas in which you would share your
-                  expertise.
+                <p className="w-[200px] text-[11px] lg:w-[251px] lg:text-[16px]">
+                  Pick the delivery method (e.g., keynote speech, panel talk,
+                  product demo)
                 </p>
               </div>
-              <div className="mb-[15px] flex lg:mb-0 lg:w-[345px]">
+              <div className="flex lg:mb-0 lg:w-[345px]">
                 <p className="mr-[12px] flex text-[12px] font-bold lg:mr-[19px] lg:text-[18px]">
                   Step 03
                 </p>
-                <p className="text-[11px] lg:w-[251px] lg:text-[16px]">
-                  Pick the industries/areas in which you would share your
-                  expertise.
+                <p className="w-[200px] text-[11px] lg:w-[251px] lg:text-[16px]">
+                  Pick the available dates and time slots to lock in your
+                  segment
                 </p>
               </div>
             </div>
