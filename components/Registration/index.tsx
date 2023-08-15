@@ -42,13 +42,13 @@ const Registration = () => {
         .filter(
           (key) => key.startsWith(index) && selectedOptions.subTopics[key]
         )
-        .map((key) => key.split("-")[1])
+        .map((key) => parseInt(key.split("-")[1]) + 1)
         .join(","),
       a3: Object.keys(selectedOptions.deliveryMethod)
         .filter(
           (key) => key.startsWith(index) && selectedOptions.deliveryMethod[key]
         )
-        .map((key) => key.split("-")[1])
+        .map((key) => parseInt(key.split("-")[1]) + 1)
         .join(","),
     };
 
@@ -75,7 +75,7 @@ const Registration = () => {
         "Panel talks (between 2-5 people)",
         "Product demo screen share (40min)",
       ],
-      href: "https://calendly.com/bruno-santos-laureano/link",
+      href: "https://calendly.com/bruno-santos-laureano/securitization",
     },
     {
       name: "Exchange-Traded Funds (ETFs), Bonds, Private Equities",
@@ -91,7 +91,7 @@ const Registration = () => {
         "Panel talks (between 2-5 people)",
         "Product demo screen share (40min)",
       ],
-      href: "https://calendly.com/bruno-santos-laureano/link",
+      href: "https://calendly.com/bruno-santos-laureano/securitization",
     },
   ];
 
@@ -214,20 +214,33 @@ const Registration = () => {
                         </div>
                         <div className="mt-[24px]">
                           <div className="grid grid-cols-2 gap-x-[41px] gap-y-[13px]">
-                            {data.subTopicsOptions.map((topic) => (
-                              <div className="flex">
-                                <Checkbox
-                                  //   checked={budgetView}
-                                  //   onChange={toggleBudgetView}
-                                  color="default"
-                                  inputProps={{ "aria-label": "" }}
-                                  className=""
-                                />
-                                <p className="flex items-center text-[14px] font-normal text-[#646464]">
-                                  {topic}
-                                </p>
-                              </div>
-                            ))}
+                            {data.deliveryMethodOptions.map(
+                              (method, subIndex) => (
+                                <div className="flex">
+                                  <Checkbox
+                                    checked={
+                                      selectedOptions.deliveryMethod[
+                                        `${index}-${subIndex}`
+                                      ] || false
+                                    }
+                                    onChange={(e) =>
+                                      handleCheckboxChange(
+                                        "deliveryMethod",
+                                        index,
+                                        subIndex,
+                                        e.target.checked
+                                      )
+                                    }
+                                    color="default"
+                                    inputProps={{ "aria-label": "" }}
+                                    className=""
+                                  />
+                                  <p className="flex items-center text-[14px] font-normal text-[#646464]">
+                                    {method}
+                                  </p>
+                                </div>
+                              )
+                            )}
                             <a
                               onClick={() =>
                                 handleBookTimeSlot(data.href, index)
