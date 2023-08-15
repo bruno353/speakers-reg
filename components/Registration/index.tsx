@@ -97,38 +97,45 @@ const Registration = () => {
 
   return (
     <>
-      <section className="px-[100px] pb-[400px] pt-[80px]" id={"taskStart"}>
+      <section
+        className="px-[20px] pt-[20px] pb-[400px] lg:px-[100px] lg:pt-[80px]"
+        id={"taskStart"}
+      >
         <div className="container px-0">
-          <div className=" text-[16px] font-normal !leading-[19px] text-[#000000]">
-            <div className="text-[30px] font-bold !leading-[36px]">
+          <div className="text-[16px] font-normal !leading-[19px] text-[#000000]">
+            <div className="text-[21px] font-bold !leading-[36px] lg:text-[30px]">
               Speaker registration
             </div>
-            <div className="mt-[38px] flex justify-between">
-              <div className="flex w-[345px]">
-                <p className="mr-[19px] flex text-[18px] font-bold">Step 01</p>
-                <p className="w-[251px]">
+            <div className="mt-[24px] lg:mt-[38px] lg:flex lg:justify-between">
+              <div className="mb-[15px] flex lg:mb-0 lg:w-[345px]">
+                <p className="mr-[12px] flex text-[12px] font-bold lg:mr-[19px] lg:text-[18px]">
+                  Step 01
+                </p>
+                <p className="text-[11px] lg:w-[251px] lg:text-[16px]">
                   Pick the industries/areas in which you would share your
                   expertise.
                 </p>
               </div>
-              <div className="flex w-[345px]">
-                <p className="mr-[19px] text-[18px] font-bold">Step 02</p>
-                <p className="w-[251px]">
+              <div className="mb-[15px] flex lg:mb-0 lg:w-[345px]">
+                <p className="mr-[12px] flex text-[12px] font-bold lg:mr-[19px] lg:text-[18px]">
+                  Step 02
+                </p>
+                <p className="text-[11px] lg:w-[251px] lg:text-[16px]">
                   Pick the industries/areas in which you would share your
                   expertise.
                 </p>
               </div>
-              <div className="flex w-[345px]">
-                <p className="mr-[19px] flex items-start text-[18px] font-bold">
+              <div className="mb-[15px] flex lg:mb-0 lg:w-[345px]">
+                <p className="mr-[12px] flex text-[12px] font-bold lg:mr-[19px] lg:text-[18px]">
                   Step 03
                 </p>
-                <p className="w-[251px]">
+                <p className="text-[11px] lg:w-[251px] lg:text-[16px]">
                   Pick the industries/areas in which you would share your
                   expertise.
                 </p>
               </div>
             </div>
-            <div className="mt-[79px] grid grid-cols-2 gap-x-[10px] gap-y-[9px]">
+            <div className="mt-[40px] lg:mt-[79px] lg:grid lg:grid-cols-2 lg:gap-x-[10px] lg:gap-y-[9px]">
               {datas.map((data, index) =>
                 stateOpen !== String(index) ? (
                   <div
@@ -136,45 +143,45 @@ const Registration = () => {
                     onClick={() => {
                       handleChange(String(index));
                     }}
-                    className="flex h-[56px] cursor-pointer justify-between rounded-[5px] bg-[#0354EC] pl-[28px] pr-[13px] font-medium text-white  hover:bg-[#173979]"
+                    className="mb-[12px] flex h-[56px] cursor-pointer justify-between rounded-[5px] bg-[#0354EC] py-[5px] pl-[28px] pr-[13px] font-medium text-white hover:bg-[#173979] lg:mb-0  lg:py-0"
                   >
-                    <div className="flex items-center text-[18px] !leading-[22px]">
+                    <div className="flex items-center text-[12px] !leading-[22px] lg:text-[18px]">
                       {data.name}
                     </div>
-                    <div className="flex items-center text-[30px] !leading-[36px]">
+                    <div className="flex items-center text-[21px] !leading-[36px] lg:text-[30px]">
                       +
                     </div>
                   </div>
                 ) : (
                   <div
                     key={index}
-                    className="rounded-[5px] bg-[#F3F3F3] pb-[55px] pl-[28px] pr-[13px] pt-[17px] font-medium  text-[#000000]"
+                    className="mb-[12px] rounded-[5px] bg-[#F3F3F3] pb-[55px] pl-[21px] pr-[13px] pt-[17px] font-medium text-[#000000] lg:mb-0  lg:pl-[28px]"
                   >
                     <div className="flex justify-between">
-                      <div className="flex items-center text-[18px] !leading-[22px]">
+                      <div className="flex items-center text-[12px] !leading-[22px] lg:text-[18px]">
                         {data.name}
                       </div>
                       <div
                         onClick={() => {
                           handleChange("-1");
                         }}
-                        className="flex cursor-pointer items-center text-[30px] !leading-[36px] text-[#646464]"
+                        className="flex cursor-pointer items-center text-[21px] !leading-[36px] text-[#646464] lg:text-[30px]"
                       >
                         -
                       </div>
                     </div>
-                    <div className="mt-[41px] pl-[10px]">
+                    <div className="mt-[30px] pl-[10px] lg:mt-[41px]">
                       <div>
                         <div className="flex">
-                          <div className="mr-[12px] border-b border-[#000000] text-[16px] font-bold">
+                          <div className="mr-[12px] border-b border-[#000000] text-[11px] font-bold lg:text-[16px]">
                             Sub topics
                           </div>
-                          <div className="-mb-[3px] flex items-end text-[10px] font-normal text-[#646464]">
+                          <div className="-mb-[3px] flex items-end text-[8px] font-normal text-[#646464] lg:text-[10px]">
                             You can choose multiple
                           </div>
                         </div>
                         <div className="mt-[24px]">
-                          <div className="grid grid-cols-2 gap-x-[41px] gap-y-[13px]">
+                          <div className="lg:grid lg:grid-cols-2 lg:gap-x-[41px] lg:gap-y-[13px]">
                             {data.subTopicsOptions.map((topic, subIndex) => (
                               <div className="flex">
                                 <Checkbox
@@ -195,7 +202,7 @@ const Registration = () => {
                                   inputProps={{ "aria-label": "" }}
                                   className=""
                                 />
-                                <p className="flex items-center text-[14px] font-normal text-[#646464]">
+                                <p className="mb-[11px] flex items-center text-[10px] font-normal text-[#646464] lg:mb-0 lg:text-[14px]">
                                   {topic}
                                 </p>
                               </div>
@@ -203,9 +210,9 @@ const Registration = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="mt-[44px]">
+                      <div className="mt-[30px] lg:mt-[44px]">
                         <div className="flex">
-                          <div className="mr-[12px] border-b border-[#000000] text-[16px] font-bold">
+                          <div className="mr-[12px] border-b border-[#000000] text-[11px] font-bold lg:text-[16px]">
                             Delivery method
                           </div>
                           <div className="-mb-[3px] flex items-end text-[10px] font-normal text-[#646464]">
@@ -213,7 +220,7 @@ const Registration = () => {
                           </div>
                         </div>
                         <div className="mt-[24px]">
-                          <div className="grid grid-cols-2 gap-x-[41px] gap-y-[13px]">
+                          <div className="lg:grid lg:grid-cols-2 lg:gap-x-[41px] lg:gap-y-[13px]">
                             {data.deliveryMethodOptions.map(
                               (method, subIndex) => (
                                 <div className="flex">
@@ -235,7 +242,7 @@ const Registration = () => {
                                     inputProps={{ "aria-label": "" }}
                                     className=""
                                   />
-                                  <p className="flex items-center text-[14px] font-normal text-[#646464]">
+                                  <p className="mb-[8px] flex items-center text-[10px] font-normal text-[#646464] lg:mb-0 lg:text-[14px]">
                                     {method}
                                   </p>
                                 </div>
@@ -245,7 +252,7 @@ const Registration = () => {
                               onClick={() =>
                                 handleBookTimeSlot(data.href, index)
                               }
-                              className=" mt-[45px] flex h-[51px] w-[180px] items-center justify-center rounded-[8px] bg-[#0354EC] px-[32px] text-[16px] font-bold text-white hover:bg-[#173979]"
+                              className="mt-[35px] flex h-[40px] w-[120px] cursor-pointer  items-center justify-center rounded-[8px] bg-[#0354EC] px-[15px] text-[11px] font-bold text-white hover:bg-[#173979] lg:mt-[45px] lg:h-[51px] lg:w-[180px] lg:px-[32px] lg:text-[16px]"
                             >
                               Book time slot
                             </a>
