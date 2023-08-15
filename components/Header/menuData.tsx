@@ -1,34 +1,10 @@
-import { Menu } from '@/types/menu'
+import { Menu } from "@/types/menu";
 
 const menuData: Menu[] = [
   {
     id: 1,
-    title: 'Projects',
-    path: '/tasks',
-    newTab: false,
-  },
-  {
-    id: 2,
-    title: 'Docs',
-    path: 'https://l3a.gitbook.io/l3a-dao-documentation/getting-started/vision',
-    newTab: true,
-  },
-  {
-    id: 3,
-    title: 'Governance & Forum',
-    path: 'https://www.discourse.org/',
-    newTab: true,
-  },
-  {
-    id: 4,
-    title: 'FAQs',
-    path: '/',
-    newTab: false,
-  },
-  {
-    id: 5,
-    title: 'Profile',
-    path: '/profile',
+    title: "Registration",
+    path: "/registration",
     newTab: false,
   },
   // {
@@ -98,5 +74,5 @@ const menuData: Menu[] = [
   //     },
   //   ],
   // },
-]
-export default menuData
+];
+export default menuData;

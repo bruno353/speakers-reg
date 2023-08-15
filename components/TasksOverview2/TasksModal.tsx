@@ -58,6 +58,7 @@ const TasksModal = ({ task, index, isLoading }: TasksModalProps) => {
     // }
     return convertNodeToElement(node, index, transform)
   }
+
   return (
     <div
       className={`relative mr-1 ${

@@ -1,6 +1,7 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const Footer = () => {
+  return;
   return (
     <>
       <footer
@@ -90,8 +91,8 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-[#000000] hover:text-primary"
                     >
-                      {' '}
-                      Docs{' '}
+                      {" "}
+                      Docs{" "}
                     </a>
                   </li>
                   <li>
@@ -99,8 +100,8 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-[#000000] hover:text-primary"
                     >
-                      {' '}
-                      Docs{' '}
+                      {" "}
+                      Docs{" "}
                     </a>
                   </li>
                   <li>
@@ -108,8 +109,8 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-[#000000] hover:text-primary"
                     >
-                      {' '}
-                      Docs{' '}
+                      {" "}
+                      Docs{" "}
                     </a>
                   </li>
                 </ul>
@@ -127,8 +128,8 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-[#000000] hover:text-primary"
                     >
-                      {' '}
-                      Docs{' '}
+                      {" "}
+                      Docs{" "}
                     </a>
                   </li>
                   <li>
@@ -136,8 +137,8 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-[#000000] hover:text-primary"
                     >
-                      {' '}
-                      Docs{' '}
+                      {" "}
+                      Docs{" "}
                     </a>
                   </li>
                   <li>
@@ -145,8 +146,8 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-[#000000] hover:text-primary"
                     >
-                      {' '}
-                      Docs{' '}
+                      {" "}
+                      Docs{" "}
                     </a>
                   </li>
                 </ul>
@@ -165,7 +166,7 @@ const Footer = () => {
             <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#959CB1" />
             <mask
               id="mask0_94:899"
-              style={{ maskType: 'alpha' }}
+              style={{ maskType: "alpha" }}
               maskUnits="userSpaceOnUse"
               x="0"
               y="0"
@@ -346,7 +347,7 @@ const Footer = () => {
         </div>
       </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
