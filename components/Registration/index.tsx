@@ -25,6 +25,36 @@ import { File, SmileySad, Info } from "phosphor-react";
 
 const Registration = () => {
   const [stateOpen, setStateOpen] = useState<String>("");
+  const [selectedOptions, setSelectedOptions] = useState({
+    subTopics: {},
+    deliveryMethod: {},
+  });
+
+  function handleCheckboxChange(category, index, subIndex, checked) {
+    const newSelectedOptions = { ...selectedOptions };
+    newSelectedOptions[category][`${index}-${subIndex}`] = checked;
+    setSelectedOptions(newSelectedOptions);
+  }
+
+  function handleBookTimeSlot(href, index) {
+    const params = {
+      a2: Object.keys(selectedOptions.subTopics)
+        .filter(
+          (key) => key.startsWith(index) && selectedOptions.subTopics[key]
+        )
+        .map((key) => key.split("-")[1])
+        .join(","),
+      a3: Object.keys(selectedOptions.deliveryMethod)
+        .filter(
+          (key) => key.startsWith(index) && selectedOptions.deliveryMethod[key]
+        )
+        .map((key) => key.split("-")[1])
+        .join(","),
+    };
+
+    const url = `${href}?a2=${params.a2}&a3=${params.a3}`;
+    window.location.href = url; // Redireciona para a URL construída
+  }
 
   function handleChange(index: string) {
     setStateOpen(index);
@@ -45,7 +75,7 @@ const Registration = () => {
         "Panel talks (between 2-5 people)",
         "Product demo screen share (40min)",
       ],
-      href: "https://calendly.com/bruno-santos-laureano/test-event-type",
+      href: "https://calendly.com/bruno-santos-laureano/link",
     },
     {
       name: "Exchange-Traded Funds (ETFs), Bonds, Private Equities",
@@ -61,7 +91,7 @@ const Registration = () => {
         "Panel talks (between 2-5 people)",
         "Product demo screen share (40min)",
       ],
-      href: "https://calendly.com/bruno-santos-laureano/test-event-type",
+      href: "https://calendly.com/bruno-santos-laureano/link",
     },
   ];
 
@@ -145,11 +175,22 @@ const Registration = () => {
                         </div>
                         <div className="mt-[24px]">
                           <div className="grid grid-cols-2 gap-x-[41px] gap-y-[13px]">
-                            {data.subTopicsOptions.map((topic) => (
+                            {data.subTopicsOptions.map((topic, subIndex) => (
                               <div className="flex">
                                 <Checkbox
-                                  //   checked={budgetView}
-                                  //   onChange={toggleBudgetView}
+                                  checked={
+                                    selectedOptions.subTopics[
+                                      `${index}-${subIndex}`
+                                    ] || false
+                                  }
+                                  onChange={(e) =>
+                                    handleCheckboxChange(
+                                      "subTopics",
+                                      index,
+                                      subIndex,
+                                      e.target.checked
+                                    )
+                                  }
                                   color="default"
                                   inputProps={{ "aria-label": "" }}
                                   className=""
@@ -188,7 +229,9 @@ const Registration = () => {
                               </div>
                             ))}
                             <a
-                              href={data.href}
+                              onClick={() =>
+                                handleBookTimeSlot(data.href, index)
+                              }
                               className=" mt-[45px] flex h-[51px] w-[180px] items-center justify-center rounded-[8px] bg-[#0354EC] px-[32px] text-[16px] font-bold text-white hover:bg-[#173979]"
                             >
                               Book time slot
