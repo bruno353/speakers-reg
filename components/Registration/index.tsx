@@ -90,6 +90,83 @@ const Registration = () => {
       ],
 
     },
+    {
+      name: "AI & Blockchain",
+      subTopicsOptions: [
+        {
+          name: "Quant Models",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/bi-quant-models"
+        },
+        {
+          name: "Decentralized Science and Research",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/bi-ds-research"
+        },
+        {
+          name: "Human Machine Interaction (Machine Learning)",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/di-building-data-products"
+        },
+        {
+          name: "Asset Management (NFTs)",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+        },
+        {
+          name: "Future Scalable Solutions",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+        },
+        {
+          name: "Data Standards, Ethics, and Compliance",
+          delivery: ["Panels"],
+          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+        },
+        {
+          name: "Convergence of Artificial Intelligence and Blockchain",
+          delivery: ["Panels"],
+          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+        },
+        {
+          name: "Tokenization and DAOs",
+          delivery: ["Panels"],
+          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+        },
+        {
+          name: "Decentralized Education",
+          delivery: ["Panels"],
+          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+        }
+      ],
+    },
+    {
+      name: "Day 3 (name?)",
+      subTopicsOptions: [
+        {
+          name: "Smart Contracts and Physical Assets (Real Estate)",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/di-data-sharing-and-validation"
+        },
+        {
+          name: "Decentralized Volunteerism (Humanitarianism)",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/di-data-lakes"
+        },
+        {
+          name: "GameFi, XR, VR and AR",
+          delivery: ["Panels"],
+          url: "https://calendly.com/brunolsantos152/di-building-data-products"
+        },
+        {
+          name: "Interoperability and Digital Assets",
+          delivery: ["Debate"],
+          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+        }
+      ],
+
+    },
+    
     // {
     //   name: "Exchange-Traded Funds (ETFs), Bonds, Private Equities",
     //   subTopicsOptions: [
@@ -148,7 +225,7 @@ const Registration = () => {
                 </p>
               </div>
             </div>
-            <div className="mt-[40px] lg:mt-[79px] lg:grid lg:grid-cols-2 lg:gap-x-[10px] lg:gap-y-[9px]">
+            <div className="mt-[40px] lg:mt-[79px] lg:grid lg:grid-cols-2 lg:gap-x-[10px] lg:gap-y-[15px]">
               {datas.map((data, index) =>
                 stateOpen !== String(index) ? (
                   <div
