@@ -25,74 +25,87 @@ import { File, SmileySad, Info } from "phosphor-react";
 
 const Registration = () => {
   const [stateOpen, setStateOpen] = useState<String>("");
-  const [selectedOptions, setSelectedOptions] = useState({
-    subTopics: {},
-    deliveryMethod: {},
-  });
+  const [selectedOptions, setSelectedOptions] = useState({});
 
-  function handleCheckboxChange(category, index, subIndex, checked) {
-    const newSelectedOptions = { ...selectedOptions };
-    newSelectedOptions[category][`${index}-${subIndex}`] = checked;
+  function handleCheckboxChangeSubTopic(categoryIndex, subTopicIndex) {
+    setSelectedOptions({categoryIndex, subTopicIndex});
+  }
+  function handleCheckboxChangeDelivery(categoryIndex, deliveryIndex) {
+    const newSelectedOptions = {...selectedOptions}
+    newSelectedOptions['deliveryIndex'] = deliveryIndex
     setSelectedOptions(newSelectedOptions);
   }
 
-  function handleBookTimeSlot(href, index) {
-    const params = {
-      a2: Object.keys(selectedOptions.subTopics)
-        .filter(
-          (key) => key.startsWith(index) && selectedOptions.subTopics[key]
-        )
-        .map((key) => parseInt(key.split("-")[1]) + 1)
-        .join(","),
-      a3: Object.keys(selectedOptions.deliveryMethod)
-        .filter(
-          (key) => key.startsWith(index) && selectedOptions.deliveryMethod[key]
-        )
-        .map((key) => parseInt(key.split("-")[1]) + 1)
-        .join(","),
-    };
+  function handleBookTimeSlot() {
+    // const params = {
+    //   a2: Object.keys(selectedOptions.subTopics)
+    //     .filter(
+    //       (key) => key.startsWith(index) && selectedOptions.subTopics[key]
+    //     )
+    //     .map((key) => parseInt(key.split("-")[1]) + 1)
+    //     .join(","),
+    //   a3: Object.keys(selectedOptions.deliveryMethod)
+    //     .filter(
+    //       (key) => key.startsWith(index) && selectedOptions.deliveryMethod[key]
+    //     )
+    //     .map((key) => parseInt(key.split("-")[1]) + 1)
+    //     .join(","),
+    // };
 
-    const url = `${href}?a2=${params.a2}&a3=${params.a3}`;
-    window.location.href = url; // Redireciona para a URL construída
+    // const url = `${href}?a2=${params.a2}&a3=${params.a3}`;
+    const theme = datas[selectedOptions['categoryIndex']]
+    const urlTheme = theme.subTopicsOptions[selectedOptions['subTopicIndex']].url
+    window.location.href = urlTheme; // Redireciona para a URL construída
   }
 
   function handleChange(index: string) {
+    setSelectedOptions({})
     setStateOpen(index);
   }
 
   const datas = [
     {
-      name: "Securitization of real estate, private equity, tokenization",
+      name: "Data & Infrastructure",
       subTopicsOptions: [
-        "Crypto-Based Universal Basic Income",
-        "On-Chain Diplomacy",
-        "Decentralized Intellectual Property Rights Management",
-        "Personalized Education Records and Credentials",
+        {
+          name: "Data Sharing and Validation",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/di-data-sharing-and-validation"
+        },
+        {
+          name: "Data Lakes",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/di-data-lakes"
+        },
+        {
+          name: "Building Data Products",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/brunolsantos152/di-building-data-products"
+        },
+        {
+          name: "Open Infrastructure",
+          delivery: ["Panels"],
+          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+        }
       ],
-      deliveryMethodOptions: [
-        "Virtual keynote speech + pitch deck ? sharing (20min + 5min Q&A)",
-        "Virtual Panel talk (20min)",
-        "Panel talks (between 2-5 people)",
-        "Product demo screen share (40min)",
-      ],
-      href: "https://calendly.com/bruno-santos-laureano/securitization",
+
     },
-    {
-      name: "Exchange-Traded Funds (ETFs), Bonds, Private Equities",
-      subTopicsOptions: [
-        "CBDC Infrastructure and Services",
-        "Supply Chain Financing: Real-time tracking",
-        "Tokenized Commodities",
-        "Personalized Education Records and Credentials",
-      ],
-      deliveryMethodOptions: [
-        "Product demo screen share (40min)",
-        "Product demo screen share (30min)",
-        "Panel talks (between 2-5 people)",
-        "Product demo screen share (40min)",
-      ],
-      href: "https://calendly.com/bruno-santos-laureano/securitization",
-    },
+    // {
+    //   name: "Exchange-Traded Funds (ETFs), Bonds, Private Equities",
+    //   subTopicsOptions: [
+    //     "CBDC Infrastructure and Services",
+    //     "Supply Chain Financing: Real-time tracking",
+    //     "Tokenized Commodities",
+    //     "Personalized Education Records and Credentials",
+    //   ],
+    //   deliveryMethodOptions: [
+    //     "Product demo screen share (40min)",
+    //     "Product demo screen share (30min)",
+    //     "Panel talks (between 2-5 people)",
+    //     "Product demo screen share (40min)",
+    //   ],
+    //   href: "https://calendly.com/bruno-santos-laureano/securitization",
+    // },
   ];
 
   return (
@@ -176,9 +189,6 @@ const Registration = () => {
                           <div className="mr-[12px] border-b border-[#000000] text-[11px] font-bold lg:text-[16px]">
                             Sub topics
                           </div>
-                          <div className="-mb-[3px] flex items-end text-[8px] font-normal text-[#646464] lg:text-[10px]">
-                            You can choose multiple
-                          </div>
                         </div>
                         <div className="mt-[24px]">
                           <div className="lg:grid lg:grid-cols-2 lg:gap-x-[41px] lg:gap-y-[13px]">
@@ -186,16 +196,12 @@ const Registration = () => {
                               <div className="flex">
                                 <Checkbox
                                   checked={
-                                    selectedOptions.subTopics[
-                                      `${index}-${subIndex}`
-                                    ] || false
+                                    selectedOptions['subTopicIndex'] === subIndex || false
                                   }
                                   onChange={(e) =>
-                                    handleCheckboxChange(
-                                      "subTopics",
+                                    handleCheckboxChangeSubTopic(
                                       index,
                                       subIndex,
-                                      e.target.checked
                                     )
                                   }
                                   color="default"
@@ -203,62 +209,60 @@ const Registration = () => {
                                   className=""
                                 />
                                 <p className="mb-[11px] flex items-center text-[10px] font-normal text-[#646464] lg:mb-0 lg:text-[14px]">
-                                  {topic}
+                                  {topic.name}
                                 </p>
                               </div>
                             ))}
                           </div>
                         </div>
                       </div>
+                      {selectedOptions['subTopicIndex'] >= 0 && (
                       <div className="mt-[30px] lg:mt-[44px]">
-                        <div className="flex">
-                          <div className="mr-[12px] border-b border-[#000000] text-[11px] font-bold lg:text-[16px]">
-                            Delivery method
-                          </div>
-                          <div className="-mb-[3px] flex items-end text-[10px] font-normal text-[#646464]">
-                            You can choose multiple
-                          </div>
-                        </div>
-                        <div className="mt-[24px]">
-                          <div className="lg:grid lg:grid-cols-2 lg:gap-x-[41px] lg:gap-y-[13px]">
-                            {data.deliveryMethodOptions.map(
-                              (method, subIndex) => (
-                                <div className="flex">
-                                  <Checkbox
-                                    checked={
-                                      selectedOptions.deliveryMethod[
-                                        `${index}-${subIndex}`
-                                      ] || false
-                                    }
-                                    onChange={(e) =>
-                                      handleCheckboxChange(
-                                        "deliveryMethod",
-                                        index,
-                                        subIndex,
-                                        e.target.checked
-                                      )
-                                    }
-                                    color="default"
-                                    inputProps={{ "aria-label": "" }}
-                                    className=""
-                                  />
-                                  <p className="mb-[8px] flex items-center text-[10px] font-normal text-[#646464] lg:mb-0 lg:text-[14px]">
-                                    {method}
-                                  </p>
-                                </div>
-                              )
-                            )}
-                            <a
-                              onClick={() =>
-                                handleBookTimeSlot(data.href, index)
-                              }
-                              className="mt-[35px] flex h-[40px] w-[120px] cursor-pointer  items-center justify-center rounded-[8px] bg-[#0354EC] px-[15px] text-[11px] font-bold text-white hover:bg-[#173979] lg:mt-[45px] lg:h-[51px] lg:w-[180px] lg:px-[32px] lg:text-[16px]"
-                            >
-                              Book time slot
-                            </a>
-                          </div>
+                      <div className="flex">
+                        <div className="mr-[12px] border-b border-[#000000] text-[11px] font-bold lg:text-[16px]">
+                          Delivery method
                         </div>
                       </div>
+                      <div className="mt-[24px]">
+                        <div className="lg:grid lg:grid-cols-2 lg:gap-x-[41px] lg:gap-y-[13px]">
+                          {data.subTopicsOptions[selectedOptions['subTopicIndex']].delivery.map(
+                            (topic, subIndex) => (
+                              <div className="flex">
+                                <Checkbox
+                                    checked={
+                                    selectedOptions['deliveryIndex'] === subIndex || false
+                                  }
+                                  onChange={(e) =>
+                                    handleCheckboxChangeDelivery(
+                                      index,
+                                      subIndex,
+                                    )
+                                  }
+                                  color="default"
+                                  inputProps={{ "aria-label": "" }}
+                                  className=""
+                                />
+                                <p className="mb-[8px] flex items-center text-[10px] font-normal text-[#646464] lg:mb-0 lg:text-[14px]">
+                                  {topic}
+                                </p>
+                              </div>
+                            )
+                          )}
+                        </div>
+                        {selectedOptions['deliveryIndex'] >= 0 && (
+                        <a
+                        onClick={() =>
+                          handleBookTimeSlot()
+                        }
+                        className="mt-[35px] flex h-[40px] w-[120px] cursor-pointer  items-center justify-center rounded-[8px] bg-[#0354EC] px-[15px] text-[11px] font-bold text-white hover:bg-[#173979] lg:mt-[45px] lg:h-[51px] lg:w-[180px] lg:px-[32px] lg:text-[16px]"
+                      >
+                        Book time slot
+                      </a>
+                        )}
+
+                      </div>
+                    </div>
+                      )}
                     </div>
                   </div>
                 )
