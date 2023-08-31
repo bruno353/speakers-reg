@@ -78,7 +78,11 @@ const Header = () => {
                 className={`header-logo mr-[60px] block w-full py-8 `}
               >
                 <img
-                  src="/images/header/l3a.svg"
+                  src={`${
+                    process.env.NEXT_PUBLIC_ENVIRONMENT === 'PROD'
+                      ? process.env.NEXT_PUBLIC_BASE_PATH
+                      : ''
+                  }/images/header/l3a.svg`}
                   alt="image"
                   className={`ml-5 w-[100px]`}
                 />
