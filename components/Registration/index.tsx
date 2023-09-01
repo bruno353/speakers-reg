@@ -70,22 +70,22 @@ const Registration = () => {
         {
           name: "Data Sharing and Validation",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/di-data-sharing-and-validation"
+          url: "https://calendly.com/kathleen-ragos/data-infrastructure-data-sharing-and-validation"
         },
         {
           name: "Data Lakes",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/di-data-lakes"
+          url: "https://calendly.com/kathleen-ragos/data-infrastructure-data-lakes"
         },
         {
           name: "Building Data Products",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/di-building-data-products"
+          url: "https://calendly.com/kathleen-ragos/data-infrastructure-building-data-products"
         },
         {
           name: "Open Infrastructure",
           delivery: ["Panels"],
-          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+          url: "https://calendly.com/kathleen-ragos/data-infrastructure-data-sharing-and-validation-1"
         }
       ],
 
@@ -96,47 +96,47 @@ const Registration = () => {
         {
           name: "Quant Models",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/bi-quant-models"
+          url: "https://calendly.com/kathleen-ragos/data-infrastructure-quant-models"
         },
         {
           name: "Decentralized Science and Research",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/bi-ds-research"
+          url: "hhttps://calendly.com/kathleen-ragos/ai-blockchain-decentralized-science-and-research"
         },
         {
           name: "Human Machine Interaction (Machine Learning)",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/di-building-data-products"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-human-machine-interaction-machine-learning"
         },
         {
           name: "Asset Management (NFTs)",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-asset-management-nfts"
         },
         {
           name: "Future Scalable Solutions",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-future-scalable-solutions"
         },
         {
           name: "Data Standards, Ethics, and Compliance",
           delivery: ["Panels"],
-          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-data-standards-ethics-and-compliance"
         },
         {
           name: "Convergence of Artificial Intelligence and Blockchain",
           delivery: ["Panels"],
-          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-convergence-of-artificial-intelligence-blockchain"
         },
         {
           name: "Tokenization and DAOs",
           delivery: ["Panels"],
-          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-tokenization-and-daos"
         },
         {
           name: "Decentralized Education",
           delivery: ["Panels"],
-          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-decentralized-education"
         }
       ],
     },
@@ -146,22 +146,22 @@ const Registration = () => {
         {
           name: "Smart Contracts and Physical Assets (Real Estate)",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/di-data-sharing-and-validation"
+          url: "https://calendly.com/kathleen-ragos/day-3-smart-contracts-and-physical-assets-real-estate"
         },
         {
           name: "Decentralized Volunteerism (Humanitarianism)",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/brunolsantos152/di-data-lakes"
+          url: "https://calendly.com/kathleen-ragos/day-3-decentralized-volunteerism-humanitarianism"
         },
         {
           name: "GameFi, XR, VR and AR",
           delivery: ["Panels"],
-          url: "https://calendly.com/brunolsantos152/di-building-data-products"
+          url: "https://calendly.com/kathleen-ragos/day-3-gamefi-xr-vr-and-ar"
         },
         {
           name: "Interoperability and Digital Assets",
           delivery: ["Debate"],
-          url: "https://calendly.com/brunolsantos152/di-open-infrastructure"
+          url: "https://calendly.com/kathleen-ragos/day-3-interoperability-and-digital-assets"
         }
       ],
 
