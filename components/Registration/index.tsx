@@ -85,7 +85,7 @@ const Registration = () => {
         {
           name: "Open Infrastructure",
           delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/data-infrastructure-data-sharing-and-validation-1"
+          url: "https://calendly.com/kathleen-ragos/data-infrastructure-open-infrastructure"
         }
       ],
 
@@ -96,17 +96,17 @@ const Registration = () => {
         {
           name: "Quant Models",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/data-infrastructure-quant-models"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-quant-models"
         },
         {
           name: "Decentralized Science and Research",
           delivery: ["Keynotes"],
-          url: "hhttps://calendly.com/kathleen-ragos/ai-blockchain-decentralized-science-and-research"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-decentralized-science-and-research"
         },
         {
           name: "Human Machine Interaction (Machine Learning)",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-human-machine-interaction-machine-learning"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-human-machine-interaction-ml"
         },
         {
           name: "Asset Management (NFTs)",
@@ -121,12 +121,12 @@ const Registration = () => {
         {
           name: "Data Standards, Ethics, and Compliance",
           delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-data-standards-ethics-and-compliance"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-data-standards-ethics-compliance"
         },
         {
           name: "Convergence of Artificial Intelligence and Blockchain",
           delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-convergence-of-artificial-intelligence-blockchain"
+          url: "https://calendly.com/kathleen-ragos/ai-blockchain-convergence-of-ai-blockchain"
         },
         {
           name: "Tokenization and DAOs",
@@ -146,7 +146,7 @@ const Registration = () => {
         {
           name: "Smart Contracts and Physical Assets (Real Estate)",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/day-3-smart-contracts-and-physical-assets-real-estate"
+          url: "https://calendly.com/kathleen-ragos/day-3-smart-contracts-physical-assets-real-estate"
         },
         {
           name: "Decentralized Volunteerism (Humanitarianism)",
