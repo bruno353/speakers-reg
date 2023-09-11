@@ -82,7 +82,7 @@ const Header = () => {
                     process.env.NEXT_PUBLIC_ENVIRONMENT === 'PROD'
                       ? process.env.NEXT_PUBLIC_BASE_PATH
                       : ''
-                  }/images/header/l3a.svg`}
+                  }/images/header/openmesh-logo.png`}
                   alt="image"
                   className={`ml-5 w-[100px]`}
                 />

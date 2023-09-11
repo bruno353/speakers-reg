@@ -65,103 +65,108 @@ const Registration = () => {
 
   const datas = [
     {
-      name: "Data & Infrastructure",
+      name: "Day 1 - Data & Infrastructure",
       subTopicsOptions: [
         {
-          name: "Data Sharing and Validation",
+          name: "Keynotes: 11:30am - 11:45am",
           delivery: ["Keynotes"],
           url: "https://calendly.com/kathleen-ragos/data-infrastructure-data-sharing-and-validation"
         },
         {
-          name: "Data Lakes",
+          name: "Keynotes: 4:00pm - 4:30pm",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/data-infrastructure-data-lakes"
+          url: "https://calendly.com/kathleen-ragos/2"
         },
         {
-          name: "Building Data Products",
+          name: "Panel: 1:30pm - 2:15pm",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/data-infrastructure-building-data-products"
+          url: "https://calendly.com/kathleen-ragos/3"
         },
         {
-          name: "Open Infrastructure",
+          name: "Panel: 4:30pm - 5:00pm",
           delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/data-infrastructure-open-infrastructure"
+          url: "https://calendly.com/kathleen-ragos/4"
         }
       ],
 
     },
     {
-      name: "AI & Blockchain",
+      name: "Day 2 - AI & Blockchain",
       subTopicsOptions: [
         {
-          name: "Quant Models",
+          name: "Keynotes: 9:10am - 9:35am",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-quant-models"
+          url: "https://calendly.com/kathleen-ragos/1"
         },
         {
-          name: "Decentralized Science and Research",
+          name: "Keynotes: 10:30am - 10:50am",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-decentralized-science-and-research"
+          url: "https://calendly.com/kathleen-ragos/b2"
         },
         {
-          name: "Human Machine Interaction (Machine Learning)",
+          name: "Keynotes: 11:55am - 12:30pm",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-human-machine-interaction-ml"
+          url: "https://calendly.com/kathleen-ragos/b3"
         },
         {
-          name: "Asset Management (NFTs)",
+          name: "Keynotes: 3:00pm - 3:20pm",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-asset-management-nfts"
+          url: "https://calendly.com/kathleen-ragos/b4"
         },
         {
-          name: "Future Scalable Solutions",
+          name: "Panel: 2:35pm - 3:00pm",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-future-scalable-solutions"
+          url: "https://calendly.com/kathleen-ragos/b5"
         },
         {
-          name: "Data Standards, Ethics, and Compliance",
+          name: "Panel: 4:10pm - 4:30pm",
           delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-data-standards-ethics-compliance"
-        },
-        {
-          name: "Convergence of Artificial Intelligence and Blockchain",
-          delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-convergence-of-ai-blockchain"
-        },
-        {
-          name: "Tokenization and DAOs",
-          delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-tokenization-and-daos"
-        },
-        {
-          name: "Decentralized Education",
-          delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/ai-blockchain-decentralized-education"
+          url: "https://calendly.com/kathleen-ragos/b6"
         }
       ],
     },
     {
-      name: "Day 3 (name?)",
+      name: "Day 3",
       subTopicsOptions: [
         {
-          name: "Smart Contracts and Physical Assets (Real Estate)",
+          name: "Keynotes: 8:35am - 9:00am",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/day-3-smart-contracts-physical-assets-real-estate"
+          url: "https://calendly.com/kathleen-ragos/c1"
         },
         {
-          name: "Decentralized Volunteerism (Humanitarianism)",
+          name: "Keynotes: 9:45am - 10:05am",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/day-3-decentralized-volunteerism-humanitarianism"
+          url: "https://calendly.com/kathleen-ragos/c2"
         },
         {
-          name: "GameFi, XR, VR and AR",
+          name: "Keynotes: 11:10am - 11:30am",
           delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/day-3-gamefi-xr-vr-and-ar"
+          url: "https://calendly.com/kathleen-ragos/c3"
         },
         {
-          name: "Interoperability and Digital Assets",
+          name: "Panel: 9:15am - 9:40am",
           delivery: ["Debate"],
-          url: "https://calendly.com/kathleen-ragos/day-3-interoperability-and-digital-assets"
+          url: "https://calendly.com/kathleen-ragos/c4"
+        },
+        {
+          name: "Panel: 10:20am - 11:05am",
+          delivery: ["Debate"],
+          url: "https://calendly.com/kathleen-ragos/c5"
+        },
+        {
+          name: "Panel: 12:30pm - 1:00pm",
+          delivery: ["Debate"],
+          url: "https://calendly.com/kathleen-ragos/c6"
+        },
+        {
+          name: "Product demo: 11:35am - 11:55am",
+          delivery: ["Debate"],
+          url: "https://calendly.com/kathleen-ragos/c7"
+        },
+        {
+          name: "Product demo: 12:00pm - 12:30pm",
+          delivery: ["Debate"],
+          url: "https://calendly.com/kathleen-ragos/c8"
         }
       ],
 
@@ -294,6 +299,16 @@ const Registration = () => {
                         </div>
                       </div>
                       {selectedOptions['subTopicIndex'] >= 0 && (
+                        <a
+                        onClick={() =>
+                          handleBookTimeSlot()
+                        }
+                        className="mt-[35px] flex h-[40px] w-[120px] cursor-pointer  items-center justify-center rounded-[8px] bg-[#0354EC] px-[15px] text-[11px] font-bold text-white hover:bg-[#173979] lg:mt-[45px] lg:h-[51px] lg:w-[180px] lg:px-[32px] lg:text-[16px]"
+                      >
+                        Book time slot
+                      </a>
+                        )}
+                      {/* {selectedOptions['subTopicIndex'] >= 0 && (
                       <div className="mt-[30px] lg:mt-[44px]">
                       <div className="flex">
                         <div className="mr-[12px] border-b border-[#000000] text-[11px] font-bold lg:text-[16px]">
@@ -339,7 +354,7 @@ const Registration = () => {
 
                       </div>
                     </div>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 )
