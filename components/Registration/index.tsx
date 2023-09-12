@@ -114,14 +114,19 @@ const Registration = () => {
           url: "https://calendly.com/kathleen-ragos/b4"
         },
         {
-          name: "Panel: 2:35pm - 3:00pm",
+          name: "Keynotes: 4:10pm - 4:30pm",
+          delivery: ["Panels"],
+          url: "https://calendly.com/kathleen-ragos/b6"
+        },
+        {
+          name: "Panel: 1:45pm - 2:20pm",
           delivery: ["Keynotes"],
           url: "https://calendly.com/kathleen-ragos/b5"
         },
         {
-          name: "Panel: 4:10pm - 4:30pm",
-          delivery: ["Panels"],
-          url: "https://calendly.com/kathleen-ragos/b6"
+          name: "Panel: 2:35pm - 3:00pm",
+          delivery: ["Keynotes"],
+          url: "https://calendly.com/kathleen-ragos/7"
         }
       ],
     },
