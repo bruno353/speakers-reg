@@ -101,7 +101,7 @@ const Registration = () => {
         {
           name: "Keynotes: 10:30am - 10:50am",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/b2"
+          url: "https://calendly.com/bruno-santos-laureano/b2"
         },
         {
           name: "Keynotes: 11:55am - 12:30pm",
@@ -126,7 +126,7 @@ const Registration = () => {
         {
           name: "Panel: 2:35pm - 3:00pm",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/7"
+          url: "https://calendly.com/bruno-santos-laureano/b7"
         }
       ],
     },
@@ -141,7 +141,7 @@ const Registration = () => {
         {
           name: "Keynotes: 9:45am - 10:05am",
           delivery: ["Keynotes"],
-          url: "https://calendly.com/kathleen-ragos/c2"
+          url: "https://calendly.com/bruno-santos-laureano/c7"
         },
         {
           name: "Keynotes: 11:10am - 11:30am",
