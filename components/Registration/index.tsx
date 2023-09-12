@@ -157,16 +157,6 @@ const Registration = () => {
           name: "Panel: 12:30pm - 1:00pm",
           delivery: ["Debate"],
           url: "https://calendly.com/kathleen-ragos/c6"
-        },
-        {
-          name: "Product demo: 11:35am - 11:55am",
-          delivery: ["Debate"],
-          url: "https://calendly.com/kathleen-ragos/c7"
-        },
-        {
-          name: "Product demo: 12:00pm - 12:30pm",
-          delivery: ["Debate"],
-          url: "https://calendly.com/kathleen-ragos/c8"
         }
       ],
 
